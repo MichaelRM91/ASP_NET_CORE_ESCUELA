@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XHgF47uR6ZEOgDefGR5+CAAujQ+NrZD3q0lAFDE7cBw=",
+  "Hash": "YkQDAoLi+hw2tiEyxnzEnzIrl0IHUacfTnQIj23qEMY=",
   "Source": "asp-net-core",
   "BasePath": "_content/asp-net-core",
   "Mode": "Default",
@@ -16,40 +16,6 @@
     }
   ],
   "Assets": [
-    {
-      "Identity": "C:\\platzi\\asp_net_core\\obj\\Debug\\net6.0\\scopedcss\\bundle\\asp-net-core.styles.css",
-      "SourceId": "asp-net-core",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\platzi\\asp_net_core\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
-      "BasePath": "_content/asp-net-core",
-      "RelativePath": "asp-net-core.styles.css",
-      "AssetKind": "All",
-      "AssetMode": "CurrentProject",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "ScopedCss",
-      "AssetTraitValue": "ApplicationBundle",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\platzi\\asp_net_core\\obj\\Debug\\net6.0\\scopedcss\\bundle\\asp-net-core.styles.css"
-    },
-    {
-      "Identity": "C:\\platzi\\asp_net_core\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\asp-net-core.bundle.scp.css",
-      "SourceId": "asp-net-core",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\platzi\\asp_net_core\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
-      "BasePath": "_content/asp-net-core",
-      "RelativePath": "asp-net-core.bundle.scp.css",
-      "AssetKind": "All",
-      "AssetMode": "Reference",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "ScopedCss",
-      "AssetTraitValue": "ProjectBundle",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\platzi\\asp_net_core\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\asp-net-core.bundle.scp.css"
-    },
     {
       "Identity": "C:\\platzi\\asp_net_core\\wwwroot\\css\\site.css",
       "SourceId": "asp-net-core",

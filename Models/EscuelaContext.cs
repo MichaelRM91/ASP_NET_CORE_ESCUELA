@@ -1,10 +1,11 @@
+using System;
 using System.Linq;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace asp_net_core.Models;
-
-      public class EscuelaContext : DbContext
+namespace asp_net_core.Models
+{
+    public class EscuelaContext : DbContext
     {
         public DbSet<Escuela> Escuelas { get; set; }
         public DbSet<Asignatura> Asignaturas { get; set; }
@@ -27,7 +28,7 @@ namespace asp_net_core.Models;
             escuela.Nombre = "Platzi School";
             escuela.Ciudad = "Bogota";
             escuela.Pais = "Colombia";
-            escuela.Direccion = "Avd Siempre viva";
+            escuela.Dirección = "Avd Siempre viva";
             escuela.TipoEscuela = TiposEscuela.Secundaria;
 
             //Cargar Cursos de la escuela
@@ -85,15 +86,11 @@ namespace asp_net_core.Models;
         private static List<Curso> CargarCursos(Escuela escuela)
         {
             return new List<Curso>(){
-                        new Curso() {
-                            Id = Guid.NewGuid().ToString(),
-                            EscuelaId = escuela.Id,
-                            Nombre = "101",
-                            Jornada = TiposJornada.Mañana },
-                        new Curso() {Id = Guid.NewGuid().ToString(), EscuelaId = escuela.Id, Nombre = "201", Jornada = TiposJornada.Mañana},
-                        new Curso   {Id = Guid.NewGuid().ToString(), EscuelaId = escuela.Id, Nombre = "301", Jornada = TiposJornada.Mañana},
-                        new Curso() {Id = Guid.NewGuid().ToString(), EscuelaId = escuela.Id, Nombre = "401", Jornada = TiposJornada.Tarde },
-                        new Curso() {Id = Guid.NewGuid().ToString(), EscuelaId = escuela.Id, Nombre = "501", Jornada = TiposJornada.Tarde},
+                        new Curso() {Id = Guid.NewGuid().ToString(), EscuelaId = escuela.Id, Nombre = "101",Dirección="av siempre viva", Jornada = TiposJornada.Mañana },
+                        new Curso() {Id = Guid.NewGuid().ToString(), EscuelaId = escuela.Id, Nombre = "201",Dirección="av siempre viva", Jornada = TiposJornada.Mañana},
+                        new Curso   {Id = Guid.NewGuid().ToString(), EscuelaId = escuela.Id, Nombre = "301",Dirección="av siempre viva", Jornada = TiposJornada.Mañana},
+                        new Curso() {Id = Guid.NewGuid().ToString(), EscuelaId = escuela.Id, Nombre = "401",Dirección="av siempre viva", Jornada = TiposJornada.Tarde },
+                        new Curso() {Id = Guid.NewGuid().ToString(), EscuelaId = escuela.Id, Nombre = "501",Dirección="av siempre viva", Jornada = TiposJornada.Tarde},
             };
         }
 
@@ -118,3 +115,4 @@ namespace asp_net_core.Models;
             return listaAlumnos.OrderBy((al) => al.Id).Take(cantidad).ToList();
         }
     }
+}

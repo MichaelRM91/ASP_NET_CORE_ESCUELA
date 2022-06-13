@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
 
-namespace asp_net_core.Models;
-
+namespace asp_net_core.Models
+{
 
     public class AlumnoPromedio
     {
@@ -10,3 +10,4 @@ namespace asp_net_core.Models;
         public string alumnoid;
         public string alumnoNombre;
     }
+}

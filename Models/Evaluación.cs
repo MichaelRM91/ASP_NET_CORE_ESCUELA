@@ -1,12 +1,11 @@
 using System;
 
-namespace asp_net_core.Models;
-
+namespace asp_net_core.Models
+{
     public class Evaluación:ObjetoEscuelaBase
     {
         public Alumno Alumno { get; set; }
         public string AlumnoId { get; set; }
-        
         public Asignatura Asignatura  { get; set; }
         public string AsignaturaId { get; set; }
 
@@ -17,3 +16,4 @@ namespace asp_net_core.Models;
             return $"{Nota}, {Alumno.Nombre}, {Asignatura.Nombre}";
         }
     }
+}

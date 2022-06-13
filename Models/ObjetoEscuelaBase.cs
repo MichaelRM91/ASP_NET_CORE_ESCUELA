@@ -1,16 +1,17 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 
-namespace asp_net_core.Models;
-
-
+namespace asp_net_core.Models
+{
     public abstract class ObjetoEscuelaBase
     {
-        public string Id { get;  set; }
-        public string Nombre { get; set; }
+        public string Id { get; set; }
+        
+        public virtual string Nombre { get; set; }
 
         public ObjetoEscuelaBase()
         {
-           
+            
         }
 
         public override string ToString()
@@ -18,3 +19,4 @@ namespace asp_net_core.Models;
             return $"{Nombre},{Id}";
         }
     }
+}

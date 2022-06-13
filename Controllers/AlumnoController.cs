@@ -1,13 +1,27 @@
-
+using System;
+using System.Linq;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using asp_net_core.Models;
-namespace asp_net_core.Controllers;
 
-public class AlumnoController : Controller
+namespace asp_net_core.Controllers
 {
-    public IActionResult Index()
+    public class AlumnoController : Controller
+    {
+        public IActionResult Index(string id)
         {
-            return View(_context.Alumnos.FirstOrDefault() );
+            if(!string.IsNullOrWhiteSpace(id))
+            {
+                        var alumno = from alumn in _context.Alumnos
+                                        where alumn.Id == id
+                                        select alumn;
+
+                        return View(alumno.SingleOrDefault());
+            }
+            else
+            {
+               return View("MultiAlumno", _context.Alumnos); 
+            }
         }
 
         public IActionResult MultiAlumno()
@@ -23,5 +37,5 @@ public class AlumnoController : Controller
         {
            _context = context; 
         }
+    }
 }
-
